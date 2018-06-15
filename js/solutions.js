@@ -17,16 +17,21 @@ const checkPalindrome = (Radar) => {
 }
 
 console.log(checkPalindrome("Radar"));
-
 console.log(checkPalindrome("Borscht"));
 
 
-//Digit Sum
-const sumDigits = (num1, num2) => {
-	return (`${num1 + num2}`)
-};
 
-console.log(sumDigits(4, 2));
+//Digit Sum
+const sumDigits = (num) => {
+	let sum = 0;
+	let arr = num.toString().split(""); 
+		for (let i = 0; i < arr.length; i++) {
+			sum += parseInt(arr[i]);
+		}
+		return sum
+};
+console.log(sumDigits(42));
+
 
 
 //Pythagoras
@@ -39,6 +44,7 @@ const calculateSide = (sideA, sideB) => {
 console.log(calculateSide(8, 6));
 
 
+//Sum array
 
 
 
