@@ -21,6 +21,17 @@ console.log(checkPalindrome("Radar"));
 console.log(checkPalindrome("Borscht"));
 
 
+//Digit Sum
+
+const sumDigits = (num1, num2) => {
+	return (`${num1 + num2}`)
+};
+
+console.log(sumDigits(4, 2));
+
+
+
+
 
 
 
