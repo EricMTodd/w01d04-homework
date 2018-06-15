@@ -22,7 +22,6 @@ console.log(checkPalindrome("Borscht"));
 
 
 //Digit Sum
-
 const sumDigits = (num1, num2) => {
 	return (`${num1 + num2}`)
 };
@@ -30,6 +29,14 @@ const sumDigits = (num1, num2) => {
 console.log(sumDigits(4, 2));
 
 
+//Pythagoras
+const calculateSide = (sideA, sideB) => {
+	if ((typeof sideA !== "number") || (typeof sideB !== "number"))
+		return false;
+			return Math.sqrt(sideA * sideA + sideB * sideB);
+}
+
+console.log(calculateSide(8, 6));
 
 
 
