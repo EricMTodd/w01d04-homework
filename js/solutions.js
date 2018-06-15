@@ -55,6 +55,50 @@ const sumArray = (arr) => {
 
 console.log(sumArray([1, 2, 3, 4, 5, 6]));
 
+
+//Prime Numbers
+
+const checkPrime = (value) => {
+	for (let i = 2; i < value; i++) {
+		if (value % i === 0) {
+			return false;
+		}
+	}
+	return value > 1;
+}
+
+console.log(checkPrime(97));
+
+//All prime numbers
+
+const printPrimes = (value) => {
+	let primes = [];
+	for (let i = 2; i < value; i++) {
+			primes[i] = true;
+	}
+	let limit = Math.sqrt(value);
+	for (let i = 2; i < limit; i++) {
+		if (primes[i] === true) {
+			for (let j = i * i; j < value; j += i) {
+				primes[j] = false;
+			}
+		}
+	}
+	for (let i = 2; i < value; i++) {
+		if (primes[i] === true) {
+			console.log(i + " " + primes[i]);
+		}
+	}
+};
+
+console.log(printPrimes(97));
+
+
+
+
+
+
+
 	
 
 
