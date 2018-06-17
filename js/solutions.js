@@ -57,7 +57,6 @@ console.log(sumArray([1, 2, 3, 4, 5, 6]));
 
 
 //Prime Numbers
-
 const checkPrime = (value) => {
 	for (let i = 2; i < value; i++) {
 		if (value % i === 0) {
@@ -92,6 +91,29 @@ const printPrimes = (value) => {
 };
 
 console.log(printPrimes(97));
+
+// Insert Dash
+const insertDash = (num) => {
+	let prev = "";
+	let newString = "";
+	num = num.toString();
+
+	for (let i = 0; i < num.length; i++) {
+		parseInt(num[i]) % 2 === 0 ? current = "even" : current = "odd";
+		if (current === "odd" && prev === "odd") {
+			newString = newString + "-" + num[i];
+			prev = "odd";
+		} else {
+			newString = newString + num[i];
+			prev = current;
+		}
+	}
+
+	return newString;
+};
+
+console.log(insertDash(454793));
+
 
 
 
